@@ -1,0 +1,77 @@
+# schema.py
+# Validation schema for each target entity
+
+SCHEMA: dict = {
+    "Counterparty": {
+        "type":     "string",
+        "format":   "Bank or entity name",
+        "example":  "BANK ABC",
+        "required": True,
+        "nullable": False,
+        "pattern":  None,
+    },
+    "Initial Valuation Date": {
+        "type":     "date",
+        "format":   "DD Month YYYY",
+        "example":  "31 January 2025",
+        "required": True,
+        "nullable": False,
+        "pattern":  r"^\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}$",
+    },
+    "Notional": {
+        "type":     "string",
+        "format":   "CCY Amount",
+        "example":  "EUR 1 million",
+        "required": True,
+        "nullable": False,
+        "pattern":  r"^[A-Z]{3}\s+.+",
+    },
+    "Valuation Date": {
+        "type":     "date",
+        "format":   "DD Month YYYY",
+        "example":  "31 July 2026",
+        "required": True,
+        "nullable": False,
+        "pattern":  r"^\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}$",
+    },
+    "Maturity": {
+        "type":     "date",
+        "format":   "DD Month YYYY",
+        "example":  "07 August 2026",
+        "required": True,
+        "nullable": False,
+        "pattern":  r"^\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}$",
+    },
+    "Underlying": {
+        "type":     "string",
+        "format":   "Name (ISIN <code>, Reuters: <ticker>)",
+        "example":  "Allianz SE (ISIN DE0008404005, Reuters: ALVG.DE)",
+        "required": True,
+        "nullable": False,
+        "pattern":  None,
+    },
+    "Coupon": {
+        "type":     "string",
+        "format":   "Percentage or expression",
+        "example":  "0%",
+        "required": False,
+        "nullable": True,
+        "pattern":  r"^\d+(\.\d+)?%$",
+    },
+    "Barrier": {
+        "type":     "string",
+        "format":   "Percentage of initial price",
+        "example":  "75.00% of Shareini",
+        "required": False,
+        "nullable": True,
+        "pattern":  r"^\d+(\.\d+)?%",
+    },
+    "Calendar": {
+        "type":     "string",
+        "format":   "Calendar code",
+        "example":  "TARGET",
+        "required": False,
+        "nullable": True,
+        "pattern":  None,
+    },
+}

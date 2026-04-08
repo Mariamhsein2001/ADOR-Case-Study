@@ -1,0 +1,18 @@
+{
+  "source": "ZF4894_ALV_07Aug2026_physical.docx",
+  "engine": "rule_based_parser",
+  "document_type": "term_sheet_docx",
+  "entities": {
+    "Counterparty": "BANK ABC",
+    "InitialValuationDate": "31 January 2025",
+    "Notional": "EUR 1 million",
+    "ValuationDate": "31 July 2026",
+    "Maturity": "07 August 2026",
+    "Underlying": "Allianz SE (ISIN DE0008404005, Reuters: ALVG.DE)",
+    "Coupon": "0%",
+    "Barrier": "75.00% of Shareini",
+    "Calendar": "TARGET",
+    "UnderlyingISIN": "DE0008404005",
+    "PartyB": "CACIB"
+  }
+}
